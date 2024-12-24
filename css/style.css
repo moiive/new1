@@ -1,0 +1,300 @@
+/* 김치이야기- 메인 */
+
+/* reset */
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+a{ color: inherit; text-decoration: none;}
+ul,li { list-style: none;}
+
+/* Layout */
+
+/* 모달 */
+
+.modal {
+    position: fixed;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999999;
+}
+
+.modal .popup {
+    width: 500px; height: 300px;
+    background-color: #bbbbbb;
+    top: 45%; left: 50%;
+    position: absolute;
+    padding: 20px;
+}
+
+.modal .popup::after {
+    content: ""; display: block; clear: both;
+}
+
+.modal .popup h3 {
+    text-align: center;
+
+}
+
+.modal .popup p {margin-top: 20px;}
+
+.modal .popup button {
+    padding: 10px;
+    background-color: midnightblue;
+    border: none;
+    color: #fff;
+    position: relative;
+    float: right; margin-top: 30px;
+    margin-right: 10px;
+}
+
+/* 모달끝 */
+#wrap {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid;
+}
+
+main {
+    width: 100%;
+    height: calc( 100% - 120px );
+    background-color: antiquewhite;
+    display: flex;
+}
+
+header {
+    width: 200px;
+    height: 100%;
+    background-color: brown;
+    overflow-y: hidden
+}
+
+header .logo {
+    width: 200px;
+}
+
+header .logo img {
+    width: 100%;
+}
+
+nav {
+    padding: 10px;
+}
+header .gnb>li>a {
+    display: block;
+    width: 100%; 
+    /* line-height: 40px; */
+    padding: 7px 24px;
+    background-color: rgb(220, 128, 98);
+    color: #fff;
+    border-bottom: 1px solid rgb(255, 189, 181);
+}
+
+header .gnb>li:last-child>a {
+    border-bottom: 0;
+}
+
+header .gnb>li>a:hover {
+    background-color: rgb(255, 205, 188);
+}
+
+header .sub>li>a {
+    display: block;
+    background-color: rgb(231, 231, 231);
+    padding: 6px 24px;
+    font-size: 14px;
+    border-bottom: 1px solid rgb(182, 182, 182);
+}
+
+header .sub>li:last-child>a {
+    border-bottom: 0;
+}
+
+header .sub>li>a:hover {
+    background-color: rgb(238, 197, 159);
+    color: rgb(160, 96, 89);
+}
+
+header .spot {
+    width: 100%;
+    /* background: yellow; */
+    padding: 20px;
+    display: flex;
+}
+
+header .spot li {
+    flex: 1; text-align: center;
+    font-size: 13px;
+    
+}
+header .spot li a {
+    /* background-color: aqua; */
+    padding: 5px; color: #d2d2d2;
+}
+
+header .spot li a:hover {
+    color: #fffdfd;
+}
+
+header .spot li:first-child {
+    border-right: 1px solid #eee;
+}
+
+.con {
+    width: 400px;  height: 100%;
+    background-color: rgb(239, 192, 136);
+}
+
+.con .banner {
+    width: 100%; height: 162px;
+    overflow: hidden;
+}
+
+.con .cont {
+    width: 100%; height: 160px;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.con .cont h2 {
+    width: 80px; line-height: 30px;
+    background-color: aqua;
+    font-size: 15px; text-align: center;
+}
+.con .cont table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.con .cont table th {
+    background-color: rgb(225, 225, 225);
+    font-weight: normal; font-size: 14px;
+    letter-spacing: 5px;
+}
+.con .cont table th:first-child {
+    width: 280px;
+}
+.con .cont table td {
+    background-color: rgb(255, 255, 255);
+    font-size: 13px; padding: 0 10px;
+    border-bottom: 1px dashed #bbbbbb;
+}
+
+.con .cont table tr:last-child td {
+    border-bottom: 0;
+}
+
+.con .cont table td:first-child {
+    width: 280px !important; 
+    
+}
+
+.con .cont table td:first-child a {
+    display: block;
+    width: 280px;
+    color: #2e221b;
+    line-height: 1.6;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.con .cont table td:first-child a:hover {
+    color: orange;
+}
+.con .cont table td:last-child {
+    width: 200px;
+    font-size: 11px;
+    color: #666;
+}
+
+/* 갤러리 */
+
+.con .gallery {
+    height: 180px;
+}
+
+.con .gallery .c-box {
+    display: flex;
+}
+
+.con .gallery .c-box figure {
+    flex: 1;
+    background: #fff;
+}
+
+.con .gallery .c-box figure:first-child {
+    margin-right: 15px;
+}
+
+.con .gallery .c-box figcaption {
+    font-size: 12px;
+}
+
+.con .gallery .c-box img {
+    width: 110px;
+}
+
+.con .icon {
+    padding: 0 10px;
+}
+
+.con .icon ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.con .icon ul li {
+    width: 60px; height: 60px;
+    background-color: lightpink;
+}
+
+.visual {
+    width: calc(100% - 200px - 400px);
+    height: 100%; 
+    overflow: hidden;
+}
+.visual ul {
+    width: calc( 100% * 3 );
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.visual ul li {
+    width: calc( 100% / 3);
+    height: 100%;
+    position: relative;
+}
+
+
+
+.visual img {
+    width: 100%; height: 100%; 
+    object-fit: cover;
+}
+
+.visual .txt {
+    width: 300px; min-width: 200px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    background-color: rgba(84, 60, 24, 0.7);
+    color: #fff;
+    word-break: keep-all;
+    padding: 15px;
+}
+
+.visual .txt h2 {
+    font-size: 40px;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 120px;
+    background-color: aquamarine;
+    display: flex;
+}
+
+footer ul {
+    display: flex;
+}
